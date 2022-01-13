@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h2> EMPLOYEE REGISTER PAGE </h2>
+<form method="post" th:action="@{/update}" th:object="${employee}">
+<pre>
+EMPLOYEE CODE     : <input type="text" th:field="*{empCode}" readonly/>
+    EMPLOYEE NAME     : <input type="text" th:field="*{empName}"/>
+    EMPLOYEE DEPT     : <input type="text" th:field="*{empDept}"/>
+
+
+                         <input type="submit" value="UPDATE EMPLOYEE"/>    
+                
+            <b>     <a th:href="@{/findall}">VIEW ALL EMPLOYEE</a > </b>
+     <b> [[${message}]]  </b>           
+                        
+</pre>
+
+
+</form>
+
+
+</body>
+</html>
